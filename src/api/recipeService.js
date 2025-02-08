@@ -11,3 +11,14 @@ export const getRecipes = async () => {
         
     }
 }
+
+export const getRecipeId = async (id) => {
+    try{
+        const response = await fetch(`${BASE_URL}${id}/information?apiKey=${API_KEY}`)
+        if(!response.ok) throw new Error('Failed get recipes')
+        const data = await response.json()
+        return data
+    } catch(e){
+
+    }
+}

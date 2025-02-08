@@ -44,9 +44,9 @@ const [isOpen, setIsOpen] = useState(false)
 
       {isOpen && (
         <div className="lg:hidden bg-white shadow-md">
-          <a href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
-          <a href="/recipes" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Recipe</a>
-          <a href="/meal-plan" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Meal Plan</a>
+          <Link to="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</Link>
+          <Link to="/recipe" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Recipe</Link>
+          <Link to="/meal-plan" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Meal Plan</Link>
           <div className="border-t my-2"></div>
           <a href="/login" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Login</a>
           <a href="/register" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Register</a>

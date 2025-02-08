@@ -9,6 +9,7 @@
 @layer base {
     body {
         font-family: "Poppins", serif;
+        @apply overflow-x-hidden
     }
 
     nav {

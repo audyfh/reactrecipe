@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Jumbotron = () => {
   return (
@@ -15,7 +16,8 @@ const Jumbotron = () => {
           <p className="text-lg mt-4 text-green-800">
             Temukan berbagai resep sehat dan lezat untuk setiap kesempatan.
           </p>
-          <button className='text-white w-auto p-3 text-2xl mt-7 rounded-xl bg-green-900'>Get Started</button>
+          <Link to="/recipe"><button className='text-white w-auto p-3 text-2xl mt-7 rounded-xl bg-green-900'>Get Started</button></Link>
+          
         </div>
       </div>
       

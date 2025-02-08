@@ -4,6 +4,7 @@ import { Router, Routes , Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Recipe from './pages/Recipe'
 import MealPlan from './pages/MealPlan'
+import RecipeDetail from './pages/RecipeDetail'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/recipe" element={<Recipe />} />
       <Route path="/meal-plan" element={<MealPlan />} />
+      <Route path='/recipe/:id' element={<RecipeDetail/>}/>
     </Routes>
   </>
   )
