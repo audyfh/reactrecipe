@@ -1,0 +1,8 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000; /* Mengubah warna panah */
+  height: 40px; /* Tinggi tombol */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

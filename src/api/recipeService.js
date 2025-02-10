@@ -22,3 +22,14 @@ export const getRecipeId = async (id) => {
 
     }
 }
+
+export const getMealPlan = async () => {
+    try {
+        const response = await fetch (`https://api.spoonacular.com/mealplanner/generate?apiKey=${API_KEY}`)
+        if(!response.ok) throw new Error('Failed get meal plan')
+        const data = await response.json()
+        return data.week
+    } catch(e) {
+
+    }
+}

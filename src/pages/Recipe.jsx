@@ -27,7 +27,7 @@
             <ul className='p-5 mt-4 grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {recipes.map((recipe) => (
                    <li key={recipe.id} className="mb-4">
-                        <RecipeCard recipe={recipe} />
+                        <RecipeCard recipe={recipe}/>
                     </li>
                 ))}
             </ul>
