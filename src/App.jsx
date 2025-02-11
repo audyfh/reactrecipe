@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Recipe from './pages/Recipe'
 import MealPlan from './pages/MealPlan'
 import RecipeDetail from './pages/RecipeDetail'
+import MealDay from './pages/MealDay'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path="/recipe" element={<Recipe />} />
       <Route path="/meal-plan" element={<MealPlan />} />
       <Route path='/recipe/:id' element={<RecipeDetail/>}/>
+      <Route path='/meal-day' element={<MealDay/>}/>
     </Routes>
   </>
   )

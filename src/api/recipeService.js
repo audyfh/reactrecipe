@@ -33,3 +33,15 @@ export const getMealPlan = async () => {
 
     }
 }
+
+export const getDailyMeal = async (ids) => {
+
+    const idsParam = ids.join(',');
+    try {
+        const response = await fetch(`${BASE_URL}informationBulk?apiKey=${API_KEY}&ids=${idsParam}`)
+        const data = await response.json()
+        return data
+    } catch (e) {
+        
+    }
+}

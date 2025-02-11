@@ -4,10 +4,11 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../util/custom-swiper.css';
+import { Link } from 'react-router-dom';
 const MealCard = ({day, week}) => {
 
   const IMG_URL = 'https://img.spoonacular.com/recipes/'
-
+  const ids = week[day]?.meals.map((item) => item.id) || [];
 
   return (
     <div className="max-w-sm h-100 bg-green-600 rounded-lg shadow-lg p-5">
@@ -25,6 +26,7 @@ const MealCard = ({day, week}) => {
             alt='img'
             className="rounded-md w-full h-40 object-cover"
           />
+          {ids.push(item.id)}
         </SwiperSlide>
       ))}
     </Swiper>
@@ -34,9 +36,12 @@ const MealCard = ({day, week}) => {
       <p className="text-white font-semibold">Carbs: {week[day].nutrients.carbohydrates || 0}g</p>
       <p className="text-white font-semibold">Fat: {week[day].nutrients.fat || 0}g</p>
     </div>
-    <button className="mt-5 w-full bg-white text-green-600 font-bold py-2 rounded-lg">
-      View Details
-    </button>
+    <Link to={`/meal-day?ids=${ids.join(',')}`} >
+      <button className="mt-5 w-full bg-white text-green-600 font-bold py-2 rounded-lg">
+        View Details
+      </button>
+    </Link>
+    
   </div>
   )
 }
